@@ -7,3 +7,4 @@ from .flying import Flying
 from .walking import Walking
 from .swimming import Swimming
 from .river_dolphin import RiverDolphin
+from .stagnant import Stagnant

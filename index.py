@@ -7,7 +7,7 @@ from actions.report import build_facility_report
 keahua = Arboretum("Keahua Arboretum", "123 Paukauila Lane")
 
 def build_menu():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    # os.system('cls' if os.name == 'nt' else 'clear')
     print("1. Annex Habitat")
     print("2. Release Animal into Habitat")
     print("3. Feed Animal")
