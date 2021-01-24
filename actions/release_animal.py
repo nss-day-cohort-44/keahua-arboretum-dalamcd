@@ -39,8 +39,9 @@ def release_animal(arboretum):
     avail = []
     for biome in arboretum.biomes:
         if biome.check_suitability(animal):
-            avail.append(biome)
-            print(f"{len(avail)}. {biome.biome_type.capitalize()}: {biome.name} ({biome.animal_count} animals)")
+            if biome.animal_count < biome.max_animals:
+                avail.append(biome)
+                print(f"{len(avail)}. {biome.biome_type.capitalize()}: {biome.name} ({biome.animal_count} animals)")
     
     option = input("Select biome > ")
     try:

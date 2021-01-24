@@ -20,4 +20,4 @@ class RiverDolphin(Animal, Identifiable):
 
 
     def __str__(self):
-        return f'{self.species} ({self.id.hex[0:8]}).'
+        return f'{self.species} ({self.id.hex[0:8]})'

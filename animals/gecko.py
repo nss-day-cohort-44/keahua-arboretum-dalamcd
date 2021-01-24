@@ -19,4 +19,4 @@ class Gecko(Animal, Identifiable):
             print(f"The gold dust day gecko rejects the {prey}.")
 
     def __str__(self):
-        return f"{self.species} ({self.id.hex[0:8]})."
+        return f"{self.species} ({self.id.hex[0:8]})"
