@@ -39,7 +39,7 @@ class Arboretum:
     def coastlands(self):
         arr = []
         for biome in self.__biomes:
-            if(biome.biome_type == "coastland"):
+            if(biome.biome_type == "coastline"):
                 arr.append(biome)
         return arr
 
@@ -48,5 +48,13 @@ class Arboretum:
         arr = []
         for biome in self.__biomes:
             if(biome.biome_type == "grassland"):
+                arr.append(biome)
+        return arr
+
+    @property
+    def forests(self):
+        arr = []
+        for biome in self.__biomes:
+            if(biome.biome_type == "forest"):
                 arr.append(biome)
         return arr
