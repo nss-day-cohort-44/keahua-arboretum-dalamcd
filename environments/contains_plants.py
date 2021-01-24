@@ -22,3 +22,7 @@ class ContainsPlants():
     @property
     def max_plants(self):
         return self.__max_plants
+
+    @property
+    def plants(self):
+        return self.__plants

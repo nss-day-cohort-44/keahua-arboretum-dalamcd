@@ -19,4 +19,4 @@ class Kikakapu(Animal, Identifiable):
 			print(f'The kikakapu rejects the {prey}')
 
 	def __str__(self):
-		return f'Kikakapu ({self.id.hex[0:8]}).'
+		return f'{self.species} ({self.id.hex[0:8]}).'

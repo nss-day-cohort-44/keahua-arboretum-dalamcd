@@ -33,6 +33,8 @@ Choose animal to feed.
 	else:
 		animal = None
 		print("Not a valid option.")
+		feed_animal(arboretum)
+		return
 
 	if animal:
 		for index, feed in enumerate(animal.prey):

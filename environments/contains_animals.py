@@ -23,3 +23,7 @@ class ContainsAnimals():
     @property
     def max_animals(self):
         return self.__max_animals
+    
+    @property
+    def animals(self):
+        return self.__animals

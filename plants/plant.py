@@ -1,5 +1,5 @@
 class Plant:
 
-    def __init__(self, species, season):
+    def __init__(self, species, biomes):
       self.species = species
-      self.peak_season = season
+      self.biome_types = biomes

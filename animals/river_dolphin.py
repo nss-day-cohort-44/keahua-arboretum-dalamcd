@@ -7,7 +7,7 @@ class RiverDolphin(Animal, Identifiable):
         Animal.__init__(self, "River dolphin", ["river", "coastline"])
         Identifiable.__init__(self)
         self.__prey = ( "Trout", "Mackarel", "Salmon", "Sardine" )
-        
+
     @property
     def prey(self):
         return self.__prey
@@ -20,4 +20,4 @@ class RiverDolphin(Animal, Identifiable):
 
 
     def __str__(self):
-        return f'Dolphin ({self.id.hex[0:8]}).'
+        return f'{self.species} ({self.id.hex[0:8]}).'

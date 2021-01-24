@@ -19,4 +19,4 @@ class Ulae(Animal, Identifiable):
             print(f"The 'ulae rejects the {prey}")
 
     def __str__(self):
-        return f"'Ulae ({self.id.hex[0:8]})."
+        return f"{self.species} ({self.id.hex[0:8]})."

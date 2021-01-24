@@ -16,20 +16,25 @@ def release_animal(arboretum):
 
     if choice == "1":
         animal = RiverDolphin()
-    if choice == "2":
+    elif choice == "2":
         animal = OpeApeA()
-    if choice == "3":
+    elif choice == "3":
         animal = Pueo()
-    if choice == "4":
+    elif choice == "4":
         animal = Ulae()
-    if choice == "5":
+    elif choice == "5":
         animal = Gecko()
-    if choice == "6":
+    elif choice == "6":
         animal = NeneGoose()
-    if choice == "7":
+    elif choice == "7":
         animal = Kikakapu()
-    if choice == "8":
+    elif choice == "8":
         animal = HappySpider()
+    else:
+        animal = None
+        print("Not a valid choice")
+        release_animal(arboretum)
+        return
 
     avail = []
     for biome in arboretum.biomes:
