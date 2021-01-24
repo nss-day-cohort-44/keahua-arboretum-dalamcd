@@ -2,27 +2,19 @@ class Arboretum:
     def __init__(self, name, address):
         self.name = name
         self.address = address
-        self.__rivers = []
-        self.__grasslands = []
-        self.__mountains = []
-        self.__forests = []
-        self.__coastlines = []
-        self.__swamps = []
+        self.__biomes = []
 
-        def add_river(river):
-            self.__rivers.append(river)
+    def add_biome(self, biome):
+        self.__biomes.append(biome)
 
-        def add_grassland(grassland):
-            self.__grasslands.append(grassland)
+    @property
+    def biomes(self):
+        return self.__biomes
     
-        def add_mountain(mountain):
-            self.__mountains.append(mountain)
-            
-        def add_forest(forest):
-            self.__forests.append(forest)
-            
-        def add_coastline(coastline):
-            self.__coastlines.append(coastline)
-            
-        def add_swamp(swamp):
-            self.__swamps.append(swamp)
+    @property
+    def rivers(self):
+        arr = []
+        for biome in self.__biomes:
+            if(biome.biome_type == "river"):
+                arr.append(biome)
+        return arr

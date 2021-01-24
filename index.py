@@ -1,16 +1,33 @@
 import os
 from arboretum import Arboretum
-from environments import River
-from animals import RiverDolphin
+from environments import River, Swamp, Coastline, Forest, Grassland, Mountain
+from animals import RiverDolphin, Gecko
 from actions.annex import annex_habitat
 from actions.release_animal import release_animal
 from actions.report import build_facility_report
 
 keahua = Arboretum("Keahua Arboretum", "123 Paukauila Lane")
 
-river = River("test riv")
-dolphin = RiverDolphin()
-river.add_animal(dolphin)
+keahua.add_biome(River("River 1"))
+keahua.add_biome(River("River 2"))
+
+keahua.add_biome(Coastline("Coastline 1"))
+keahua.add_biome(Coastline("Coastline 2"))
+
+keahua.add_biome(Swamp("Swamp 1"))
+keahua.add_biome(Swamp("Swamp 2"))
+
+keahua.add_biome(Forest("Forest 1"))
+keahua.add_biome(Forest("Forest 2"))
+
+keahua.add_biome(Grassland("Grassland 1"))
+keahua.add_biome(Grassland("Grassland 2"))
+
+keahua.add_biome(Mountain("Mountain 1"))
+keahua.add_biome(Mountain("Mountain 2"))
+
+gecko = Gecko()
+print(gecko)
 
 def build_menu():
     # os.system('cls' if os.name == 'nt' else 'clear')
@@ -20,9 +37,6 @@ def build_menu():
     print("4. Add Plant to Habitat")
     print("5. Display Facility Report")
     print("6. Exit")
-    print(river)
-    print(dolphin)
-    print(river.max_animals)
 
 
 def main_menu():
