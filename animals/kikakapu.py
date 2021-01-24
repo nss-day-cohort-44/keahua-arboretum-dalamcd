@@ -21,6 +21,5 @@ class Kikakapu(Animal, Freshwater, Stagnant, Identifiable):
         else:
             print(f'The kikakapu rejects the {prey}')
 
-
     def __str__(self):
         return f'Kikakapu {self.id}.'

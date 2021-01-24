@@ -1,10 +1,16 @@
 import os
 from arboretum import Arboretum
+from environments import River
+from animals import RiverDolphin
 from actions.annex import annex_habitat
 from actions.release_animal import release_animal
 from actions.report import build_facility_report
 
 keahua = Arboretum("Keahua Arboretum", "123 Paukauila Lane")
+
+river = River("test riv")
+dolphin = RiverDolphin()
+river.add_animal(dolphin)
 
 def build_menu():
     # os.system('cls' if os.name == 'nt' else 'clear')
@@ -14,6 +20,9 @@ def build_menu():
     print("4. Add Plant to Habitat")
     print("5. Display Facility Report")
     print("6. Exit")
+    print(river)
+    print(dolphin)
+    print(river.max_animals)
 
 
 def main_menu():

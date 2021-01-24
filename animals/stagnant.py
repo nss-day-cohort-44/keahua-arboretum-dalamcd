@@ -4,4 +4,4 @@ class Stagnant(Aquatic):
 
     def __init__(self):
         super().__init__()
-        self.stagnant_water = True
+        self.requires_current = False
