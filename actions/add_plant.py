@@ -36,6 +36,12 @@ def add_plant(arboretum):
 			avail[int(option) - 1].add_plant(plant)
 		except OverflowError:
 			print(f"{avail[int(option) -1].name} already has the maximum number of plants.")
+			add_plant(arboretum)
+			return
+		except IndexError:
+			print("Not a valid option.")
+			add_plant(arboretum)
+			return
 		else:
 			print(f"Added {plant.species} to {avail[int(option) - 1].name}!")
 

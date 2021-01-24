@@ -27,3 +27,10 @@ class ContainsAnimals():
     @property
     def animals(self):
         return self.__animals
+    
+    @property
+    def animals_by_name(self):
+        names = []
+        for animal in self.__animals:
+            names.append(animal.species)
+        return names

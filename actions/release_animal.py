@@ -48,6 +48,12 @@ def release_animal(arboretum):
         avail[int(option) - 1].add_animal(animal)
     except OverflowError:
         print(f"{avail[int(option) -1].name} already has the maximum number of animals.")
+        release_animal(arboretum)
+        return
+    except IndexError:
+        print("Not a valid option.")
+        release_animal(arboretum)
+        return
     else:
         print(f"Added {animal.species} to {avail[int(option) - 1].name}!")
 

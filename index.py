@@ -1,7 +1,7 @@
 import os
 from arboretum import Arboretum
 from environments import River, Swamp, Coastline, Forest, Grassland, Mountain
-from animals import RiverDolphin, Gecko
+from animals import RiverDolphin, Gecko, Kikakapu
 from actions.annex import annex_habitat
 from actions.release_animal import release_animal
 from actions.report import build_facility_report
@@ -27,6 +27,14 @@ keahua.add_biome(Grassland("Grassland 2"))
 
 keahua.add_biome(Mountain("Mountain 1"))
 keahua.add_biome(Mountain("Mountain 2"))
+
+keahua.rivers[0].add_animal(RiverDolphin())
+keahua.rivers[0].add_animal(RiverDolphin())
+keahua.rivers[0].add_animal(RiverDolphin())
+keahua.rivers[0].add_animal(Kikakapu())
+keahua.rivers[0].add_animal(Kikakapu())
+keahua.rivers[0].add_animal(Kikakapu())
+keahua.rivers[0].add_animal(Kikakapu())
 
 gecko = Gecko()
 print(gecko)

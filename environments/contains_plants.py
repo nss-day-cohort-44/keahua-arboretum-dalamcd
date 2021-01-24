@@ -26,3 +26,10 @@ class ContainsPlants():
     @property
     def plants(self):
         return self.__plants
+
+    @property
+    def plants_by_name(self):
+        names = []
+        for plant in self.__plants:
+            names.append(plant.species)
+        return names
