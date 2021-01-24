@@ -6,7 +6,7 @@ class OpeApeA(Animal, Identifiable):
     def __init__(self):
         Animal.__init__(self, "Ope'ape'a", ["forest", "mountain"])
         Identifiable.__init__(self)
-        self.__prey = { "grass", "fly" }
+        self.__prey = ( "grass", "fly" )
 
     @property
     def prey(self):

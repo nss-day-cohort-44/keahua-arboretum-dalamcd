@@ -6,7 +6,7 @@ class Ulae(Animal, Identifiable):
     def __init__(self):
         Animal.__init__(self, "'Ulae", ["coastline"])
         Identifiable.__init__(self)
-        self.__prey = { "small fish" }
+        self.__prey = ( "small fish", )
 
     @property
     def prey(self):

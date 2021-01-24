@@ -6,7 +6,7 @@ class HappySpider(Animal, Identifiable):
     def __init__(self):
         Animal.__init__(self, "Hawaiian happy face spider", ["swamp"])
         Identifiable.__init__(self)
-        self.__prey = { "fly" }
+        self.__prey = ( "fly",)
 
     @property
     def prey(self):

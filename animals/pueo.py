@@ -6,7 +6,7 @@ class Pueo(Animal, Identifiable):
     def __init__(self):
         Animal.__init__(self, "Pueo", ["forest", "grassland"])
         Identifiable.__init__(self)
-        self.__prey = { "rat", "mouse", "hampster" }
+        self.__prey = ( "rat", "mouse", "hampster" )
 
     @property
     def prey(self):

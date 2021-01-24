@@ -35,13 +35,15 @@ def release_animal(arboretum):
     for biome in arboretum.biomes:
         if biome.check_suitability(animal):
             avail.append(biome)
-            print(f"{len(avail)}. {biome.biome_type.capitalize()}: {biome.name}")
+            print(f"{len(avail)}. {biome.biome_type.capitalize()}: {biome.name} ({biome.animal_count} animals)")
     
     option = input("Select biome > ")
-
-    avail[int(option) - 1].add_animal(animal)
-
-    print(f"Added {animal.species} to {avail[int(option) - 1].name}!")
+    try:
+        avail[int(option) - 1].add_animal(animal)
+    except OverflowError:
+        print(f"{avail[int(option) -1].name} already has the maximum number of animals.")
+    else:
+        print(f"Added {animal.species} to {avail[int(option) - 1].name}!")
 
 
     # for index, river in enumerate(arboretum.rivers):

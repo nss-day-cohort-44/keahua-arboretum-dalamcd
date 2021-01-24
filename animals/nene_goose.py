@@ -6,7 +6,7 @@ class NeneGoose(Animal, Identifiable):
     def __init__(self):
         Animal.__init__(self, "Nene goose", ["grassland"])
         Identifiable.__init__(self)
-        self.__prey = { "lettuce", "watercress", "bread" }
+        self.__prey = ( "lettuce", "watercress", "bread" )
 
     @property
     def prey(self):

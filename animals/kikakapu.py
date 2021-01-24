@@ -6,7 +6,7 @@ class Kikakapu(Animal, Identifiable):
 	def __init__(self):
 		Animal.__init__(self, "Kikakapu", ["swamp", "river"])
 		Identifiable.__init__(self)
-		self.__prey = { "sea anemone" }
+		self.__prey = ( "sea anemone", )
 
 	@property
 	def prey(self):

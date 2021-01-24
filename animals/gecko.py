@@ -6,7 +6,7 @@ class Gecko(Animal, Identifiable):
     def __init__(self):
         Animal.__init__(self, "Gold Dust Day Gecko", ["forest"])
         Identifiable.__init__(self)
-        self.__prey = { "insect" }
+        self.__prey = ( "insect", )
 
     @property
     def prey(self):
